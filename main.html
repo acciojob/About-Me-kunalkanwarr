@@ -25,7 +25,7 @@
         .left-column {
             width: 30%;
             padding-right: 20px;
-            text-align: center;
+            text-align: left; /* Align left */
         }
 
         .right-column {
@@ -34,7 +34,7 @@
 
         img {
             width: 150px;
-            border-radius: 50%;
+            border-radius: 5px; /* Make it rounded */
             margin-bottom: 20px;
         }
 
@@ -55,51 +55,63 @@
 
         .skill {
             margin-bottom: 10px;
+            display: flex; /* Use flexbox for skill layout */
+            align-items: center; /* Vertically center the items */
         }
 
         .skill-name {
             font-weight: bold;
             margin-right: 10px;
+            width: 80px; /* Adjust width as needed */
+            text-align: left;
         }
 
         .progress-bar {
             background-color: #ddd;
-            height: 10px;
-            border-radius: 5px;
+            height: 8px; /* Thinner progress bar */
+            border-radius: 4px;
             width: 70%;
             display: inline-block;
-            overflow: hidden; /* Ensures the inner bar doesn't exceed the container */
+            overflow: hidden;
+            margin-left: 10px; /* Space from the skill name */
         }
 
         .progress {
             background-color: #007bff;
-            height: 10px;
-            border-radius: 5px;
-            width: 0; /* Will be set dynamically with JavaScript */
+            height: 8px; /* Match progress bar height */
+            border-radius: 4px;
+            width: 0;
+        }
+
+        .skill img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px; /* Space between icon and progress bar */
+            vertical-align: middle; /* Align the icon vertically */
+            border-radius: 0; /* Remove border radius */
+        }
+
+        .skill-percentage {
+          margin-left: auto; /* Push percentage to the right */
+          margin-right: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="left-column">
-            <img src="your_image.jpg" alt="Shubham Bhola"> <!-- Replace with your image -->
+            <img src="your_image.jpg" alt="Shubham Bhola">
             <h2>Name</h2>
             <p>Shubham Bhola</p>
             <h2>Profile</h2>
             <p>Software Developer</p>
             <h2>Email</h2>
             <p>abcdef796@gmail.com</p>
-        </div>
-        <div class="right-column">
-            <h2>About Me</h2>
-            <p>I am a Self-starter with a passion to adapt and evangelise new technologies. I have a passion for software development with a diverse skillset ranging from the MERN stack to a stronghold on data structures and algorithms. I like to tackle complex challenges head-on to deliver technically sound solutions with optimum efficiency.</p>
-            <p>I believe that magic is possible with a blend of imagination, hard-work and passion. Most of all, I believe in determination and honest efforts to enhance my skills in order to contribute to the growth of society.</p>
-
+            <h2>Skills</h2>
             <div class="skills-container">
-                <h2>Skills</h2>
                 <div class="skill">
-                    <span class="skill-name">React</span>
-                    <img src="react_icon.png" alt="React Icon" style="width: 20px; vertical-align: middle;">
+                    <span class="skill-name">REACT</span>
+                    <img src="react_icon.png" alt="React Icon">
                     <span class="skill-percentage">95%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="95"></div>
@@ -107,31 +119,31 @@
                 </div>
                 <div class="skill">
                     <span class="skill-name">CSS</span>
-                    <img src="css_icon.png" alt="CSS Icon" style="width: 20px; vertical-align: middle;">
+                    <img src="css_icon.png" alt="CSS Icon">
                     <span class="skill-percentage">95%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="95"></div>
                     </div>
                 </div>
                  <div class="skill">
-                    <span class="skill-name">JavaScript</span>
-                    <img src="javascript_icon.png" alt="JavaScript Icon" style="width: 20px; vertical-align: middle;">
+                    <span class="skill-name">JAVASCRIPT</span>
+                    <img src="javascript_icon.png" alt="JavaScript Icon">
                     <span class="skill-percentage">95%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="95"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span class="skill-name">Node.js</span>
-                    <img src="nodejs_icon.png" alt="Node.js Icon" style="width: 20px; vertical-align: middle;">
+                    <span class="skill-name">NODEJS</span>
+                    <img src="nodejs_icon.png" alt="Node.js Icon">
                     <span class="skill-percentage">90%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="90"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span class="skill-name">MongoDB</span>
-                    <img src="mongodb_icon.png" alt="MongoDB Icon" style="width: 20px; vertical-align: middle;">
+                    <span class="skill-name">MONGODB</span>
+                    <img src="mongodb_icon.png" alt="MongoDB Icon">
                     <span class="skill-percentage">90%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="90"></div>
@@ -139,23 +151,23 @@
                 </div>
                 <div class="skill">
                     <span class="skill-name">C/C++</span>
-                    <img src="c_cpp_icon.png" alt="C/C++ Icon" style="width: 20px; vertical-align: middle;">
+                    <img src="c_cpp_icon.png" alt="C/C++ Icon">
                     <span class="skill-percentage">99%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="99"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span class="skill-name">Python</span>
-                    <img src="python_icon.png" alt="Python Icon" style="width: 20px; vertical-align: middle;">
+                    <span class="skill-name">PYTHON</span>
+                    <img src="python_icon.png" alt="Python Icon">
                     <span class="skill-percentage">99%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="99"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span class="skill-name">Batch</span>
-                    <img src="batch_icon.png" alt="Batch Icon" style="width: 20px; vertical-align: middle;">
+                    <span class="skill-name">BATCH</span>
+                    <img src="batch_icon.png" alt="Batch Icon">
                     <span class="skill-percentage">99%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="99"></div>
@@ -163,21 +175,26 @@
                 </div>
                 <div class="skill">
                     <span class="skill-name">AWS</span>
-                    <img src="aws_icon.png" alt="AWS Icon" style="width: 20px; vertical-align: middle;">
+                    <img src="aws_icon.png" alt="AWS Icon">
                     <span class="skill-percentage">93%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="93"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <span class="skill-name">Hadoop</span>
-                    <img src="hadoop_icon.png" alt="Hadoop Icon" style="width: 20px; vertical-align: middle;">
+                    <span class="skill-name">HADOOP</span>
+                    <img src="hadoop_icon.png" alt="Hadoop Icon">
                     <span class="skill-percentage">93%</span>
                     <div class="progress-bar">
                         <div class="progress" data-skill="93"></div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="right-column">
+            <h2>About Me</h2>
+            <p>I am a Self-starter with a passion to adapt and evangelise new technologies. I have a passion for software development with a diverse skillset ranging from the MERN stack to a stronghold on data structures and algorithms. I like to tackle complex challenges head-on to deliver technically sound solutions with optimum efficiency.</p>
+            <p>I believe that magic is possible with a blend of imagination, hard-work and passion. Most of all, I believe in determination and honest efforts to enhance my skills in order to contribute to the growth of society.</p>
         </div>
     </div>
 
